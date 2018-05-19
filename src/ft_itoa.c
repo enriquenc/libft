@@ -11,31 +11,33 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_itoa(int n)
+char	*ft_itoa(intmax_t n)
 {
-	char	*res;
-	int		size;
-	int		i;
+	char			*res;
+	int				size;
+	intmax_t		i;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	size = 1;
 	i = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	while ((i = i / 10))
 		size++;
-	if (n < 0)
-		size += 1;
 	if ((res = (char *)malloc(sizeof(*res) * size + 1)) == NULL)
 		return (NULL);
 	if (n < 0)
-	{
-		res[0] = '-';
 		n *= -1;
-	}
+	i = n;
 	res[size--] = '\0';
-	res[size--] = n % 10 + 48;
-	while ((n = n / 10))
-		res[size--] = n % 10 + 48;
+	while (i)
+	{
+		if (i % 10 >= 0)
+			res[size--] = i % 10 + 48;
+		else
+			res[size--] = -1 * (i % 10) + 48;
+		i = i / 10;
+	}
 	return (res);
 }
