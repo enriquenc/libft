@@ -39,9 +39,8 @@ projects.
 
 
 ## Getting Started
-![ScreenShot](https://i.imgur.com/xrWc8xl.jpg)
-![ScreenShot](https://i.imgur.com/b5gq8Ik.jpg)
-![ScreenShot](https://i.imgur.com/dDApKzU.jpg)
+![ScreenShot](https://i.imgur.com/gJ1MAxS.png)
+![ScreenShot](https://i.imgur.com/OISFLAv.png)
 
 ## Authors
 
